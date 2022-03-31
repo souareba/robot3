@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Template: Standard Robot Framework
 
 Want to get started using [Robot Framework](https://robocorp.com/docs/languages-and-frameworks/robot-framework/basics) this is the simplest template to start from.
@@ -11,3 +12,7 @@ This template robot:
 ## Learning materials
 
 - [All docs related to Robot Framework](https://robocorp.com/docs/languages-and-frameworks/robot-framework)
+=======
+# robot3
+Robocorp Automation
+>>>>>>> d6b0149dd57228f1c08d815e79339f0e1a6c02cd
