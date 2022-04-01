@@ -9,11 +9,11 @@ Library           RPA.HTTP
 Library           RPA.Tables
 Library           RPA.PDF
 # Library qui sauvegarde les informations confidentiels dans un coffre
-Library           RPA.Robocorp.Vault
+#Library          RPA.Robocorp.Vault
 Library           RPA.Archive
 Library           RPA.Dialogs
 # Au cas où on voudrait charger les credentials en local
-#Library          RPA.Robocloud.Secrets
+Library           RPA.Robocloud.Secrets
 Task Teardown     Close All Browsers
 
 *** Variables ***
@@ -69,13 +69,12 @@ Entrer la commande Input
 
 *** Tasks ***
 Download csv file
-    Entrer la commande Input
     #Download    https://robotsparebinindustries.com/orders.csv    overwrite=true
+    #Entrer la commande Input
+    ${coffre} =    Get Secret    rbotsparebin
+    Download    ${coffre}[url]
 
 Open the robot order website and insert
-    ${coffre} =    Get Secret    credentials
-    #Log    ${coffre}[login]
-    #Log    ${coffre}[password]
     Open Chrome Browser    https://robotsparebinindustries.com/#/robot-order
     Maximize Browser Window
     #Ferme la fenêtre automatic qui s'affiche au début

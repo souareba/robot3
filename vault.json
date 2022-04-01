@@ -1,6 +1,5 @@
 {
     "rbotsparebin": {
-        "username": "maria",
-        "password": "thoushallnotpass"
+        "url": "https://robotsparebinindustries.com/orders.csv"
     }
 }
